@@ -1,0 +1,84 @@
+﻿{
+  "type": "object",
+  "required": [
+    "Question1",
+    "Question2",
+    "Question3",
+    "Question4",
+    "Question5",
+    "Question6",
+    "Question7",
+    "Question8",
+    "Question9",
+    "Question10"
+  ],
+  "Templates": {
+    "NotUnderstood": {
+      "Patterns": [ "I do not understand \"{0}\".", "Try again, I don't get \"{0}\"." ]
+    },
+    "EnumSelectOne": {
+      "Patterns": [ "Leaving the EU could lead to a net economic cost, but I'm down with that? {||}" ]
+    }
+  },
+  "properties": {
+    "Question1": {
+      "Prompt": { "Patterns": [ "So your nuts about bots and want to learn more? {||}" ] },
+      "type": "boolean"
+    },
+    "Question2": {
+      "Prompt": { "Patterns": [ "Well I don't care anyway, I'm ignoring your responses until the end.  Would you like to continue? {||}" ] },
+      "type": "boolean"
+    },
+    "Question3": {
+      "Prompt": { "Patterns": [ "Like I said, regardless we'll continue anyway.  So you want to build a bot? {||}" ] },
+      "type": "boolean"
+    },
+    "Question4": {
+      "Prompt": { "Patterns": [ "Have you built a bot like me before? {||}" ] },
+      "type": "boolean"
+    },
+    "Question5": {
+      "Prompt": { "Patterns": [ "Which language do you prefer? {||}" ] },
+      "type": "string",
+      "enum": [ "Option1", "Option2", "Option3" ],
+      "Values": {
+        "Option1": { "Describe": "C# baby" },
+        "Option2": { "Describe": "I'm down with Node" },
+        "Option3": { "Describe": "eh?  English?" }
+      }
+    },
+    "Question6": {
+      "Prompt": { "Patterns": [ "So I'm bot written in C# using FormFlow with a Json file template, still interested? {||}" ] },
+      "type": "boolean"
+    },
+    "Question7": {
+      "Prompt": { "Patterns": [ "Which bot client 'channel' interests you the most? {||}" ] },
+      "type": "string",
+      "enum": [ "Option1", "Option2", "Option3", "Option4", "Option5", "Option6", "Option7", "Option8", "Option9", "Option10" ],
+      "Values": {
+        "Option1": { "Describe": "Skype" },
+        "Option2": { "Describe": "Webchat" },
+        "Option3": { "Describe": "Direct Line" },
+        "Option4": { "Describe": "Email" },
+        "Option5": { "Describe": "Facebook Messenger" },
+        "Option6": { "Describe": "GroupMe" },
+        "Option7": { "Describe": "Kik" },
+        "Option8": { "Describe": "Slack" },
+        "Option9": { "Describe": "SMS" },
+        "Option10": { "Describe": "Telegram" }
+      }
+    },
+    "Question8": {
+      "Prompt": { "Patterns": [ "My development environment is setup and I'm ready to go? {||}" ] },
+      "type": "boolean"
+    },
+    "Question9": {
+      "Prompt": { "Patterns": [ "Below you can give me some verbatim feedback: {||}" ] },
+      "type": "string"
+    },
+    "Question10": {
+      "Prompt": { "Patterns": [ "You've been very patient, now - would you like a link to my internals (source code)? {||}" ] },
+      "type": "boolean"
+    }
+  }
+}
