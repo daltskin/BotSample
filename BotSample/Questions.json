@@ -15,9 +15,6 @@
   "Templates": {
     "NotUnderstood": {
       "Patterns": [ "I do not understand \"{0}\".", "Try again, I don't get \"{0}\"." ]
-    },
-    "EnumSelectOne": {
-      "Patterns": [ "Leaving the EU could lead to a net economic cost, but I'm down with that? {||}" ]
     }
   },
   "properties": {
