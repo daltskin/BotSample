@@ -1,4 +1,5 @@
 ﻿{
+  "References": [ "BotSample.dll" ],
   "type": "object",
   "required": [
     "Question1",
@@ -19,22 +20,27 @@
   },
   "properties": {
     "Question1": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "So your nuts about bots and want to learn more? {||}" ] },
       "type": "boolean"
     },
     "Question2": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "Well I don't care anyway, I'm ignoring your responses until the end.  Would you like to continue? {||}" ] },
       "type": "boolean"
     },
     "Question3": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "Like I said, regardless we'll continue anyway.  So you want to build a bot? {||}" ] },
       "type": "boolean"
     },
     "Question4": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "Have you built a bot like me before? {||}" ] },
       "type": "boolean"
     },
     "Question5": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "Which language do you prefer? {||}" ] },
       "type": "string",
       "enum": [ "Option1", "Option2", "Option3" ],
@@ -45,10 +51,12 @@
       }
     },
     "Question6": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "So I'm bot written in C# using FormFlow with a Json file template, still interested? {||}" ] },
       "type": "boolean"
     },
     "Question7": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "Which bot client 'channel' interests you the most? {||}" ] },
       "type": "string",
       "enum": [ "Option1", "Option2", "Option3", "Option4", "Option5", "Option6", "Option7", "Option8", "Option9", "Option10" ],
@@ -66,14 +74,17 @@
       }
     },
     "Question8": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "My development environment is setup and I'm ready to go? {||}" ] },
       "type": "boolean"
     },
     "Question9": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "Below you can give me some verbatim feedback: {||}" ] },
       "type": "string"
     },
     "Question10": {
+      "Describe": "some text",
       "Prompt": { "Patterns": [ "You've been very patient, now - would you like a link to my internals (source code)? {||}" ] },
       "type": "boolean"
     }
