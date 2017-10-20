@@ -9,9 +9,7 @@ using System.Web.Http;
 
 namespace BotSample
 {
-    // Only enable authentication once you've configured your bot in the Bot Framework Portal and 
-    // have set the BotId, MicrosoftAppId and MicrosoftAppPassword in the Web.Config for your bot 
-    // [BotAuthentication]
+    [BotAuthentication]
     public class MessagesController : ApiController
     {
         internal static IDialog<JObject> MakeRootDialog()
@@ -30,7 +28,7 @@ namespace BotSample
                 //ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
                 if (activity.Type == ActivityTypes.Message)
                 {
-                    await Conversation.SendAsync(activity, MakeRootDialog);
+                    await Microsoft.Bot.Builder.Dialogs.Conversation.SendAsync(activity, MakeRootDialog);
                 }
                 else
                 {

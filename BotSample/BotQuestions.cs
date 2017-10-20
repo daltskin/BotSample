@@ -60,18 +60,19 @@ namespace BotSample
                 var schema = JObject.Parse(new StreamReader(stream).ReadToEnd());
 
                 // The FormBuilder will manage where we are in the form flow and ask each subsequent question as they get answered
-                return new FormBuilderJson(schema)
-                    
+                var form = new FormBuilderJson(schema)
                     // This is a bot, so let's be friendly    
                     .Message(new PromptAttribute("Hey party people, I'm a (MS Bot Framework) Sample Bot - here to help you build your own me."))
 
-                    // Questions not yet answered
+                     //Questions not yet answered
                     .AddRemainingFields()
                     .Message("Thanks for sticking with me, processing responses..")
 
-                    // Callback once user has finished all the questions so we can process the result
+                     //Callback once user has finished all the questions so we can process the result
                     .OnCompletion(processResult)
                     .Build();
+
+                return form;
             }
         }
     }
